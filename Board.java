@@ -74,7 +74,7 @@ public class Board
     return true; // All tiles are matched
 }
 
-  /** 
+    /** 
    * Sets the tile to show its value (like a playing card face up)
    * 
    * Preconditions:
@@ -87,10 +87,10 @@ public class Board
    */
   public void showValue(int row, int column)
   {
-    if (row >= 0 && row < gameboard.length && column >= 0 && column < gameboard[0].length) {
-      gameboard[row][column].show();
-    }
-  }  
+      if (row >= 0 && row < gameboard.length && column >= 0 && column < gameboard[0].length) {
+          gameboard[row][column].show(); // Show the tile's value
+      }
+  }
 
   /** 
    * Checks if the Tiles in the two locations match.
