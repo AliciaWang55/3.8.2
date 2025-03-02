@@ -110,22 +110,20 @@ public class Board
    * @return a message indicating whether or not a match occurred
    */
   public String checkForMatch(int row1, int col1, int row2, int col2)
-  {
-    String msg = "";
+{
     Tile tile1 = gameboard[row1][col1];
     Tile tile2 = gameboard[row2][col2];
 
     if (tile1.getValue().equals(tile2.getValue())) {
-      tile1.setMatched(true);
-      tile2.setMatched(true);
-      msg = "Match found!";
+        tile1.setMatched(true); // Mark tile1 as matched
+        tile2.setMatched(true); // Mark tile2 as matched
+        return "Match found!"; // Return success message
     } else {
-      tile1.hide();
-      tile2.hide();
-      msg = "No match. Try again.";
+        tile1.hide(); // Hide tile1
+        tile2.hide(); // Hide tile2
+        return "No match. Try again."; // Return failure message
     }
-    return msg;
-  }
+}
 
   /** 
    * Checks the provided values fall within the range of the gameboard's dimension
