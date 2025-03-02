@@ -63,16 +63,16 @@ public class Board
    * @return true if all tiles have been matched, false otherwise
    */
   public boolean allTilesMatch()
-  {
+{
     for (Tile[] row : gameboard) {
-      for (Tile tile : row) {
-        if (!tile.isMatched()) {
-          return false;
+        for (Tile tile : row) {
+            if (!tile.isMatched()) {
+                return false; // If any tile is unmatched, return false
+            }
         }
-      }
     }
-    return true;
-  }
+    return true; // All tiles are matched
+}
 
   /** 
    * Sets the tile to show its value (like a playing card face up)
