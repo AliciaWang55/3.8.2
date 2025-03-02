@@ -46,14 +46,14 @@ public class Board
             if (tile.isShowing()) {
                 sb.append(tile.getValue()).append("\t"); // Show the tile's value if it is showing
             } else {
-                sb.append("*****\t"); // Show hidden representation if the tile is not showing
+                sb.append("_____\t"); // Show hidden representation as "_____"
             }
         }
         sb.append("\n"); // Move to the next line after each row
     }
     return sb.toString();
 }
-
+  
   /** 
    * Determines if the board is full of tiles that have all been matched,
    * indicating the game is over.
