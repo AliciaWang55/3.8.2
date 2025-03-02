@@ -39,20 +39,20 @@ public class Board
    * @return a string representation of the board
    */
   public String toString()
-  {
+{
     StringBuilder sb = new StringBuilder();
     for (Tile[] row : gameboard) {
-      for (Tile tile : row) {
-        if (tile.isShowing()) {
-          sb.append(tile.getValue()).append("\t");
-        } else {
-          sb.append("*****\t"); // Represent hidden tiles
+        for (Tile tile : row) {
+            if (tile.isShowing()) {
+                sb.append(tile.getValue()).append("\t"); // Show the tile's value if it is showing
+            } else {
+                sb.append("*****\t"); // Show hidden representation if the tile is not showing
+            }
         }
-      }
-      sb.append("\n");
+        sb.append("\n"); // Move to the next line after each row
     }
     return sb.toString();
-  }
+}
 
   /** 
    * Determines if the board is full of tiles that have all been matched,
